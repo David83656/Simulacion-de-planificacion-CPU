@@ -38,6 +38,7 @@ public class DataFrame extends javax.swing.JFrame {
         boton3 = new javax.swing.JButton();
         boton4 = new javax.swing.JButton();
         boton5 = new javax.swing.JButton();
+        boton7 = new javax.swing.JButton();
         boton6 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -73,7 +74,7 @@ public class DataFrame extends javax.swing.JFrame {
                 boton2ActionPerformed(evt);
             }
         });
-        bg.add(boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 460, 230, 60));
+        bg.add(boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 250, 60));
 
         boton3.setBackground(new java.awt.Color(204, 204, 204));
         boton3.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
@@ -109,6 +110,21 @@ public class DataFrame extends javax.swing.JFrame {
             }
         });
         bg.add(boton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, 230, 50));
+
+        boton7.setBackground(new java.awt.Color(204, 204, 204));
+        boton7.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        boton7.setText("MOSTRAR COMPARATIVA");
+        boton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boton7MouseClicked(evt);
+            }
+        });
+        boton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton7ActionPerformed(evt);
+            }
+        });
+        bg.add(boton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 570, 250, 60));
 
         boton6.setBackground(new java.awt.Color(204, 204, 204));
         boton6.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
@@ -165,16 +181,6 @@ public class DataFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_boton1ActionPerformed
 
-    private void boton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseClicked
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_boton2MouseClicked
-
-    private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
-        // TODO add your handling code here:
-        ProccessColecction.setData();
-    }//GEN-LAST:event_boton2ActionPerformed
-
     private void boton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MouseClicked
         // TODO add your handling code here:
         JSFgraph abrir=new JSFgraph();
@@ -213,6 +219,28 @@ public class DataFrame extends javax.swing.JFrame {
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_boton3ActionPerformed
+
+    private void boton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton7MouseClicked
+
+    private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
+        // TODO add your handling code here:
+        showComparativa abrir=new showComparativa();
+        abrir.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_boton7ActionPerformed
+
+    private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
+        // TODO add your handling code here:
+        ProccessColecction.setData();
+    }//GEN-LAST:event_boton2ActionPerformed
+
+    private void boton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_boton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -259,6 +287,7 @@ public class DataFrame extends javax.swing.JFrame {
     private javax.swing.JButton boton4;
     private javax.swing.JButton boton5;
     private javax.swing.JButton boton6;
+    private javax.swing.JButton boton7;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JToggleButton jToggleButton1;
