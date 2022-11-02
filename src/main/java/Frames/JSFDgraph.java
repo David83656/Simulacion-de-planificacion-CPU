@@ -43,7 +43,6 @@ public class JSFDgraph extends javax.swing.JFrame {
         guardarButton = new javax.swing.JButton();
         volverButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        abrirButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -97,21 +96,6 @@ public class JSFDgraph extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/650043d8d746e5e29efde3534c60f823.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 400));
-
-        abrirButton.setBackground(new java.awt.Color(204, 204, 204));
-        abrirButton.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        abrirButton.setText("ABRIR");
-        abrirButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                abrirButtonMouseClicked(evt);
-            }
-        });
-        abrirButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                abrirButtonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(abrirButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 230, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -175,15 +159,6 @@ public class JSFDgraph extends javax.swing.JFrame {
 
     }//GEN-LAST:event_volverButtonActionPerformed
 
-    private void abrirButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_abrirButtonMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_abrirButtonMouseClicked
-
-    private void abrirButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirButtonActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_abrirButtonActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -220,7 +195,6 @@ public class JSFDgraph extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton abrirButton;
     private javax.swing.JButton guardarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

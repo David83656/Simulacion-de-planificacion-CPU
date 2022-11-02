@@ -227,6 +227,8 @@ public class DataFrame extends javax.swing.JFrame {
 
     private void boton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton7ActionPerformed
         // TODO add your handling code here:
+        comparador.fillResults();
+        
         showComparativa abrir=new showComparativa();
         abrir.setVisible(true);
         this.setVisible(false);

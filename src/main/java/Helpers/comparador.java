@@ -59,14 +59,14 @@ public abstract class comparador {
     }
     public static void showResults(){
 
-            PrintHelper.cls();
+            //PrintHelper.cls();
             JOptionPane.showMessageDialog(null, (" JSF: "+results[0]+"\n"+" JSFD: "+results[1]+"\n"+" FIFO: "+results[2]+"\n"+" RR: "+results[3]+"\n"), "Resultados", 1);
-            System.out.println(" --- Comparativa entre politicas --- ");
-            System.out.println("Tiempo empleado por: ");
-            System.out.println("JSF: " + results[0]);
-            System.out.println("JSFD: " + results[1]);
-            System.out.println("FIFO: " + results[2]);
-            System.out.println("RR: " + results[3]);
+            //System.out.println(" --- Comparativa entre politicas --- ");
+            //System.out.println("Tiempo empleado por: ");
+            //System.out.println("JSF: " + results[0]);
+            //System.out.println("JSFD: " + results[1]);
+            //System.out.println("FIFO: " + results[2]);
+            //System.out.println("RR: " + results[3]);
            // ScannerController.pause();
     }
 }

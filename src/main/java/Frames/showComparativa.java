@@ -169,13 +169,8 @@ public class showComparativa extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarActionPerformed
-        // TODO add your handling code here:
 
-        
-        
-       
-        
-        
+        comparador.showResults();
     }//GEN-LAST:event_cargarActionPerformed
 
     private void cargar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargar1ActionPerformed
