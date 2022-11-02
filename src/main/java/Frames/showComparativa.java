@@ -68,15 +68,15 @@ public class showComparativa extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, 110, 30));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, 120, 30));
 
         Titulo.setFont(new java.awt.Font("Roboto Medium", 1, 24)); // NOI18N
         Titulo.setText("                    COMPARATIVA");
-        jPanel1.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 480, 60));
+        jPanel1.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 480, 60));
 
         campoTxt4.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt4.setText("RESULTADOS");
-        jPanel1.add(campoTxt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 110, 20));
+        jPanel1.add(campoTxt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 110, 20));
 
         campoTxt3.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt3.setText("ROUND ROBIN");
@@ -135,14 +135,14 @@ public class showComparativa extends javax.swing.JFrame {
         jPanel1.add(cargar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 100, 40));
 
         cargar.setBackground(new java.awt.Color(204, 204, 204));
-        cargar.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        cargar.setText("MOSTRAR");
+        cargar.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        cargar.setText("MOSTRAR TODO");
         cargar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cargarActionPerformed(evt);
             }
         });
-        jPanel1.add(cargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 130, 40));
+        jPanel1.add(cargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 180, 40));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/650043d8d746e5e29efde3534c60f823.jpg"))); // NOI18N
         Fondo.setText("jLabel1");
@@ -169,24 +169,53 @@ public class showComparativa extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarActionPerformed
-
+        comparador.fillResults();
         comparador.showResults();
     }//GEN-LAST:event_cargarActionPerformed
 
     private void cargar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargar1ActionPerformed
         // TODO add your handling code here:
+        ProccessColecction.submit();
+        RSO.run(Politicas.JSF);
+        results[0] = RSO.i - 1;
+        System.out.println("Politica: JSF" );
+        Resultados jsf = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
+        jsf.calcularTiempoDeFinalizacionDeProcesos();
+        RSO.resetRSO();
     }//GEN-LAST:event_cargar1ActionPerformed
 
     private void cargar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargar2ActionPerformed
         // TODO add your handling code here:
+        ProccessColecction.submit();
+        RSO.run(Politicas.JSFD);
+        results[1] = RSO.i - 1;
+        System.out.println("Politica: JSFD" );
+        Resultados jsfd = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
+        jsfd.calcularTiempoDeFinalizacionDeProcesos();
+        RSO.resetRSO();
     }//GEN-LAST:event_cargar2ActionPerformed
 
     private void cargar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargar3ActionPerformed
         // TODO add your handling code here:
+        ProccessColecction.submit();
+        RSO.run(Politicas.FIFO);
+        results[2] = RSO.i - 1;
+        System.out.println("Politica: FIFO" );
+        Resultados fifo = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
+        fifo.calcularTiempoDeFinalizacionDeProcesos();
+        RSO.resetRSO();
     }//GEN-LAST:event_cargar3ActionPerformed
 
     private void cargar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargar4ActionPerformed
-        // TODO add your handling code here:
+       ProccessColecction.submit();
+        RSO.run(Politicas.RR);
+        results[3] = RSO.i - 1;
+        System.out.println("Politica: Round Robin" );
+        Resultados rr = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
+        rr.calcularTiempoDeFinalizacionDeProcesos();
+        RSO.resetRSO();
+        
+        
     }//GEN-LAST:event_cargar4ActionPerformed
 
     

@@ -3,6 +3,7 @@ package Models;
 import java.util.ArrayList;
 
 import Global.Parametros;
+import javax.swing.JOptionPane;
 
 public class Resultados {
     private String[][] tabla;
@@ -30,7 +31,7 @@ public class Resultados {
             }
         }
         for(Proceso p : ordenDeFinalizacionDeProcesos){
-            System.out.println(p.toBeautyString());
+            JOptionPane.showMessageDialog(null,p.toBeautyString());
         }
     }
 }
