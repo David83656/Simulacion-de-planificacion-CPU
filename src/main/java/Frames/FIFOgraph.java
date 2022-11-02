@@ -5,8 +5,15 @@
 package Frames;
 
 import Global.ProccessColecction;
+import Global.Tabla;
+import Helpers.FileSystemHelper;
+import Helpers.OptionHelper;
 import Helpers.RSO;
+import Helpers.TablaHelper;
 import Models.Politicas;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -72,7 +79,7 @@ public class FIFOgraph extends javax.swing.JFrame {
 
         guardarButton.setBackground(new java.awt.Color(204, 204, 204));
         guardarButton.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        guardarButton.setText("GUARDAR");
+        guardarButton.setText("GUARDAR Y MOSTRAR");
         guardarButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 guardarButtonMouseClicked(evt);
@@ -135,7 +142,22 @@ public class FIFOgraph extends javax.swing.JFrame {
     }//GEN-LAST:event_guardarButtonMouseClicked
 
     private void guardarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarButtonActionPerformed
-        // TODO add your handling code here:
+            try {
+            // TODO add your handling code here:
+            OptionHelper.runTableWith(Politicas.FIFO);
+            FileSystemHelper.saveTxt(
+                    TablaHelper.tableToString(Tabla.tabla, RSO.i + 1),
+                    System.getProperty("user.home") + "/desktop",
+                    "FIFO.txt"
+            );
+            String url= "C:\\Users\\54261\\Desktop\\FIFO.txt";
+            ProcessBuilder open=new ProcessBuilder();
+            open.command("cmd.exe","/c",url);
+            open.start();
+        } catch (IOException ex) {
+            Logger.getLogger(FIFOgraph.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }//GEN-LAST:event_guardarButtonActionPerformed
 
     /**

@@ -5,8 +5,15 @@
 package Frames;
 
 import Global.ProccessColecction;
+import Global.Tabla;
+import Helpers.FileSystemHelper;
+import Helpers.OptionHelper;
 import Helpers.RSO;
+import Helpers.TablaHelper;
 import Models.Politicas;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -32,7 +39,6 @@ public class RRgraph extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         mostrarButton = new javax.swing.JButton();
-        abrirButton = new javax.swing.JButton();
         guardarButton = new javax.swing.JButton();
         volverButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -56,24 +62,9 @@ public class RRgraph extends javax.swing.JFrame {
         });
         jPanel1.add(mostrarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 230, 60));
 
-        abrirButton.setBackground(new java.awt.Color(204, 204, 204));
-        abrirButton.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        abrirButton.setText("ABRIR");
-        abrirButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                abrirButtonMouseClicked(evt);
-            }
-        });
-        abrirButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                abrirButtonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(abrirButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 230, 60));
-
         guardarButton.setBackground(new java.awt.Color(204, 204, 204));
         guardarButton.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        guardarButton.setText("GUARDAR");
+        guardarButton.setText("GUARDAR Y MOSTRAR");
         guardarButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 guardarButtonMouseClicked(evt);
@@ -84,7 +75,7 @@ public class RRgraph extends javax.swing.JFrame {
                 guardarButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(guardarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 230, 60));
+        jPanel1.add(guardarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 230, 60));
 
         volverButton.setBackground(new java.awt.Color(204, 204, 204));
         volverButton.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
@@ -138,7 +129,22 @@ public class RRgraph extends javax.swing.JFrame {
     }//GEN-LAST:event_guardarButtonMouseClicked
 
     private void guardarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarButtonActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            OptionHelper.runTableWith(Politicas.RR);
+            FileSystemHelper.saveTxt(
+                    TablaHelper.tableToString(Tabla.tabla, RSO.i + 1),
+                    System.getProperty("user.home") + "/desktop",
+                    "Round Robin.txt"
+            );
+            String url= "C:\\Users\\54261\\Desktop\\Round Robin.txt";
+            ProcessBuilder open=new ProcessBuilder();
+            open.command("cmd.exe","/c",url);
+            open.start();
+        } catch (IOException ex) {
+            Logger.getLogger(RRgraph.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_guardarButtonActionPerformed
 
     private void volverButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_volverButtonMouseClicked
@@ -151,17 +157,6 @@ public class RRgraph extends javax.swing.JFrame {
         this.setVisible(false);
 
     }//GEN-LAST:event_volverButtonActionPerformed
-
-    private void abrirButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_abrirButtonMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_abrirButtonMouseClicked
-
-    private void abrirButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirButtonActionPerformed
-        // TODO add your handling code here:
-        
-        
-        
-    }//GEN-LAST:event_abrirButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,7 +195,6 @@ public class RRgraph extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton abrirButton;
     private javax.swing.JButton guardarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

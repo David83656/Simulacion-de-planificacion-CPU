@@ -18,6 +18,8 @@ import Models.Resultados;
  */
 public class showComparativa extends javax.swing.JFrame {
     private static int[] results = new int[4];
+    
+    
 
     /**
      * Creates new form showComparativa
@@ -38,16 +40,21 @@ public class showComparativa extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         Titulo = new javax.swing.JLabel();
+        campoTxt4 = new javax.swing.JLabel();
         campoTxt3 = new javax.swing.JLabel();
         campoTxt2 = new javax.swing.JLabel();
         campoTxt1 = new javax.swing.JLabel();
         campoTxt = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTextArea5 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea4 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jTextField1 = new javax.swing.JTextField();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,70 +69,65 @@ public class showComparativa extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 460, 110, 30));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 650, 110, 30));
 
         Titulo.setFont(new java.awt.Font("Roboto Medium", 1, 24)); // NOI18N
         Titulo.setText("                    COMPARATIVA");
-        jPanel1.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 480, 60));
+        jPanel1.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 480, 60));
+
+        campoTxt4.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        campoTxt4.setText("RESULTADOS");
+        jPanel1.add(campoTxt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, -1));
 
         campoTxt3.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt3.setText("ROUND ROBIN");
-        jPanel1.add(campoTxt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 110, -1, -1));
+        jPanel1.add(campoTxt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, -1, -1));
 
         campoTxt2.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt2.setText(" FIFO");
-        jPanel1.add(campoTxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, -1, 20));
+        jPanel1.add(campoTxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, 20));
 
         campoTxt1.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt1.setText("SJF/D");
-        jPanel1.add(campoTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, -1, -1));
+        jPanel1.add(campoTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, -1));
 
         campoTxt.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt.setText("SJF");
-        jPanel1.add(campoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, -1));
+        jPanel1.add(campoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 120, 90));
+        jTextArea5.setColumns(20);
+        jTextArea5.setRows(5);
+        jScrollPane5.setViewportView(jTextArea5);
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 140, 120, 90));
+        jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 450, 180));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 120, 90));
+        jTextArea4.setColumns(20);
+        jTextArea4.setRows(5);
+        jScrollPane4.setViewportView(jTextArea4);
+
+        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 340, 270, 110));
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane3.setViewportView(jTextArea3);
+
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 270, 110));
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, 270, 110));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextArea1MouseClicked(evt);
-            }
-        });
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 140, 150));
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 120, 90));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 270, 110));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/650043d8d746e5e29efde3534c60f823.jpg"))); // NOI18N
         Fondo.setText("jLabel1");
-        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 510));
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 700));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -135,68 +137,11 @@ public class showComparativa extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        PrintHelper.cls();
-        ProccessColecction.submit();
-        RSO.run(Politicas.JSF);
-        results[0] = RSO.i - 1;
-        System.out.println("Politica: JSF" );
-        Resultados jsf = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
-        jsf.calcularTiempoDeFinalizacionDeProcesos();
-        RSO.resetRSO();
-//        System.out.println("Pulse una tecla para ver el siguiente resultado");
-//        ScannerController.pause();
-        
-        
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        PrintHelper.cls();
-        ProccessColecction.submit();
-        RSO.run(Politicas.JSFD);
-        results[1] = RSO.i - 1;
-        System.out.println("Politica: JSFD" );
-        Resultados jsfd = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
-        jsfd.calcularTiempoDeFinalizacionDeProcesos();
-        RSO.resetRSO();
-//        System.out.println("Pulse una tecla para ver el siguiente resultado");
-//        ScannerController.pause();
-        
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        PrintHelper.cls();
-        ProccessColecction.submit();
-        RSO.run(Politicas.FIFO);
-        results[2] = RSO.i - 1;
-        System.out.println("Politica: FIFO" );
-        Resultados fifo = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
-        fifo.calcularTiempoDeFinalizacionDeProcesos();
-        RSO.resetRSO();
-//        System.out.println("Pulse una tecla para ver el siguiente resultado");
-//        ScannerController.pause();
-
-
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        PrintHelper.cls();
-        ProccessColecction.submit();
-        RSO.run(Politicas.RR);
-        results[3] = RSO.i - 1;
-        System.out.println("Politica: Round Robin" );
-        Resultados rr = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
-        rr.calcularTiempoDeFinalizacionDeProcesos();
-        RSO.resetRSO();
-//        System.out.println("Pulse una tecla para continuar");
-//        ScannerController.pause();
-    }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         DataFrame abrir=new DataFrame();
@@ -204,23 +149,16 @@ public class showComparativa extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextArea1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea1MouseClicked
-        // TODO add your handling code here:
-        PrintHelper.cls();
-        ProccessColecction.submit();
-        RSO.run(Politicas.JSF);
-        results[0] = RSO.i - 1;
-        System.out.println("Politica: JSF" );
-        Resultados jsf = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
-        jsf.calcularTiempoDeFinalizacionDeProcesos();
-        RSO.resetRSO();
-        
-    }//GEN-LAST:event_jTextArea1MouseClicked
-
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -262,13 +200,18 @@ public class showComparativa extends javax.swing.JFrame {
     private javax.swing.JLabel campoTxt1;
     private javax.swing.JLabel campoTxt2;
     private javax.swing.JLabel campoTxt3;
+    private javax.swing.JLabel campoTxt4;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JTextArea jTextArea5;
     // End of variables declaration//GEN-END:variables
 }

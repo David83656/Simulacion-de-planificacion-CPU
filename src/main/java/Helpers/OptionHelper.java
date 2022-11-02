@@ -28,7 +28,7 @@ public abstract class OptionHelper {
         ProccessColecction.submit();
         RSO.run(politica);
         PrintHelper.showTable(Tabla.tabla, RSO.i + 1);
-        ScannerController.pause();
+       // ScannerController.pause();
     }
    
     public static boolean validateNotEmptyProcess(){
