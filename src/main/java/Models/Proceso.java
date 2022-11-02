@@ -2,6 +2,7 @@ package Models;
 
 import Global.Ejecucion;
 import Global.Parametros;
+import Global.Tabla;
 //PLANTILLA PARA CLASE PROCESO
 import Helpers.PrintHelper;
 import Helpers.Validator;
@@ -137,4 +138,36 @@ public class Proceso {
       "\n}"
     );
   }
+   public String toBeautyString(){
+    return 
+    "Id: " + this.id + '\n' +
+    "Tiempo requrido: " + this.tiempoRequerido +  '\n' +
+    "Rafagas de ejecucion:" + beautyRafages() + '\n' +
+    "Terminado a las " + getTiempoDeFinalizacion() + " UT";
+
+  }
+
+  private String beautyRafages(){
+    String retornable = "";
+    
+    for(int i = 0; i < this.rafagasDeEjecucion.size() - 1; i++){
+      retornable += (" " + this.rafagasDeEjecucion.get(i) + " UT --- ");
+      retornable += "E/S ---";
+    }
+    retornable += " " + this.rafagasDeEjecucion.get(this.rafagasDeEjecucion.size() - 1) + " UT";
+    return retornable;
+  }
+
+  private int getTiempoDeFinalizacion(){
+    int tiempoDeFinalizacion = 0;
+    for(int i = 0; i < Tabla.tabla[0].length; i++){
+      String celda = Tabla.tabla[Parametros.cantidadDeProcesos + 3][i];
+      if(celda == null) continue;
+      if(!celda.contains("6P" + this.id)) continue;
+      tiempoDeFinalizacion = i;
+      break;
+    }
+    return tiempoDeFinalizacion;
+  }
 }
+

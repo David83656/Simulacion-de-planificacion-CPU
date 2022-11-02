@@ -5,7 +5,10 @@ import java.util.ArrayList;
 
 public abstract class ProccessColecction {
   private static ArrayList<Proceso> procesos = new ArrayList<Proceso>();
-
+  
+  public static ArrayList<Proceso> getProcesos(){
+    return procesos;
+  }
   public static Proceso getProceso(int n) {
     return procesos.get(n);
   }

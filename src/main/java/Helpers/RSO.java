@@ -162,4 +162,9 @@ public abstract class RSO {
     Tabla.tabla[Parametros.cantidadDeProcesos + 3][Tiempo.getTiempoActual()] =
       "2P" + proceso.getId();
   }
+  public static void resetRSO(){
+    Tiempo.reiniciar();
+    Colas.reiniciarColas();
+  }
 }
+
