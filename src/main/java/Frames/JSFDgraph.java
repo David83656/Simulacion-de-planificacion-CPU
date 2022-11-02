@@ -148,7 +148,6 @@ public class JSFDgraph extends javax.swing.JFrame {
     private void guardarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarButtonActionPerformed
           
         try {
-            // TODO add your handling code here:
             OptionHelper.runTableWith(Politicas.JSFD);
             FileSystemHelper.saveTxt(
                     TablaHelper.tableToString(Tabla.tabla, RSO.i + 1),

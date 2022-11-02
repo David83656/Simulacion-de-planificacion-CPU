@@ -6,6 +6,7 @@ import Global.ScannerController;
 import Global.Tabla;
 import Models.Politicas;
 import Models.Proceso;
+import javax.swing.JOptionPane;
 
 public abstract class OptionHelper {
     public static void firstCase(){
@@ -33,8 +34,8 @@ public abstract class OptionHelper {
    
     public static boolean validateNotEmptyProcess(){
         if (ProccessColecction.isEmpty()) {
-            System.out.println("Debe cargar procesos antes de ejecutar");
-            ScannerController.pause();
+            JOptionPane.showMessageDialog(null,"Debe cargar procesos antes de ejecutar");
+           //ScannerController.pause();
             return false;
           }
           return true;

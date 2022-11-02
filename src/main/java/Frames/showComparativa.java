@@ -7,8 +7,10 @@ package Frames;
 import Global.ProccessColecction;
 import Global.ScannerController;
 import Global.Tabla;
+import Helpers.OptionHelper;
 import Helpers.PrintHelper;
 import Helpers.RSO;
+import Helpers.comparador;
 import Models.Politicas;
 import Models.Resultados;
 
@@ -45,6 +47,7 @@ public class showComparativa extends javax.swing.JFrame {
         campoTxt2 = new javax.swing.JLabel();
         campoTxt1 = new javax.swing.JLabel();
         campoTxt = new javax.swing.JLabel();
+        cargar = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTextArea5 = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -94,6 +97,16 @@ public class showComparativa extends javax.swing.JFrame {
         campoTxt.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt.setText("SJF");
         jPanel1.add(campoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
+
+        cargar.setBackground(new java.awt.Color(204, 204, 204));
+        cargar.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        cargar.setText("CARGAR DATOS");
+        cargar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cargarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 650, 170, 30));
 
         jTextArea5.setColumns(20);
         jTextArea5.setRows(5);
@@ -149,6 +162,16 @@ public class showComparativa extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarActionPerformed
+        // TODO add your handling code here:
+        if (!OptionHelper.validateNotEmptyProcess())
+        comparador.fillResults();
+        comparador.showResults();
+       
+        
+        
+    }//GEN-LAST:event_cargarActionPerformed
+
     
     
     
@@ -201,6 +224,7 @@ public class showComparativa extends javax.swing.JFrame {
     private javax.swing.JLabel campoTxt2;
     private javax.swing.JLabel campoTxt3;
     private javax.swing.JLabel campoTxt4;
+    private javax.swing.JButton cargar;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

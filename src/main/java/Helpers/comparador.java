@@ -19,8 +19,8 @@ public abstract class comparador {
         Resultados jsf = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
         jsf.calcularTiempoDeFinalizacionDeProcesos();
         RSO.resetRSO();
-        System.out.println("Pulse una tecla para ver el siguiente resultado");
-        ScannerController.pause();
+       // System.out.println("Pulse una tecla para ver el siguiente resultado");
+        //ScannerController.pause();
         
         PrintHelper.cls();
         ProccessColecction.submit();
@@ -30,8 +30,8 @@ public abstract class comparador {
         Resultados jsfd = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
         jsfd.calcularTiempoDeFinalizacionDeProcesos();
         RSO.resetRSO();
-        System.out.println("Pulse una tecla para ver el siguiente resultado");
-        ScannerController.pause();
+       // System.out.println("Pulse una tecla para ver el siguiente resultado");
+      //  ScannerController.pause();
 
         PrintHelper.cls();
         ProccessColecction.submit();
@@ -41,8 +41,8 @@ public abstract class comparador {
         Resultados fifo = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
         fifo.calcularTiempoDeFinalizacionDeProcesos();
         RSO.resetRSO();
-        System.out.println("Pulse una tecla para ver el siguiente resultado");
-        ScannerController.pause();
+       // System.out.println("Pulse una tecla para ver el siguiente resultado");
+       // ScannerController.pause();
 
         PrintHelper.cls();
         ProccessColecction.submit();
@@ -52,8 +52,8 @@ public abstract class comparador {
         Resultados rr = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
         rr.calcularTiempoDeFinalizacionDeProcesos();
         RSO.resetRSO();
-        System.out.println("Pulse una tecla para continuar");
-        ScannerController.pause();
+        //System.out.println("Pulse una tecla para continuar");
+        //ScannerController.pause();
     }
     public static void showResults(){
 
@@ -64,6 +64,6 @@ public abstract class comparador {
             System.out.println("JSFD: " + results[1]);
             System.out.println("FIFO: " + results[2]);
             System.out.println("RR: " + results[3]);
-            ScannerController.pause();
+           // ScannerController.pause();
     }
 }

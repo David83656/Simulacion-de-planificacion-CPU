@@ -1,6 +1,7 @@
 package Frames;
 import Global.ProccessColecction;
 import Global.Parametros;
+import Helpers.comparador;
 import javax.swing.JOptionPane;
 
 
