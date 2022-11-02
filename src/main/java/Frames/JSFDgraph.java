@@ -4,6 +4,10 @@
  */
 package Frames;
 
+import Global.ProccessColecction;
+import Helpers.RSO;
+import Models.Politicas;
+
 /**
  *
  * @author Lucas
@@ -105,6 +109,12 @@ public class JSFDgraph extends javax.swing.JFrame {
 
     private void mostrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarButtonActionPerformed
         // TODO add your handling code here:
+        ProccessColecction.submit();
+        RSO.run(Politicas.JSFD);
+        ShowTableResults abrir = new ShowTableResults();
+        abrir.cargarMatriz();
+        this.setVisible(false);
+        abrir.setVisible(true);
     }//GEN-LAST:event_mostrarButtonActionPerformed
 
     private void guardarButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_guardarButtonMouseClicked

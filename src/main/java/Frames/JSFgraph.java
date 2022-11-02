@@ -4,6 +4,9 @@
  */
 package Frames;
 
+import Global.ProccessColecction;
+import Helpers.RSO;
+import Models.Politicas;
 import javax.swing.JTable;
 
 /**
@@ -126,7 +129,8 @@ public class JSFgraph extends javax.swing.JFrame {
 
     private void mostrarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarButtonActionPerformed
         // TODO add your handling code here:
-        
+        ProccessColecction.submit();
+        RSO.run(Politicas.JSF);
         ShowTableResults abrir = new ShowTableResults();
         abrir.cargarMatriz();
         this.setVisible(false);

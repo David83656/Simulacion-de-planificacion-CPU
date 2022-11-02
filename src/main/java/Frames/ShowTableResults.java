@@ -18,8 +18,8 @@ import Models.Politicas;
 public class ShowTableResults extends javax.swing.JFrame {
 
     public void cargarMatriz(){
-        ProccessColecction.submit();
-        RSO.run(Politicas.JSF);
+//        ProccessColecction.submit();
+//        RSO.run(Politicas.JSF);
         String[][] matriz = Tabla.tabla;
 
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
