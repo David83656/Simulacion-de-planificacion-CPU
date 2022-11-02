@@ -4,6 +4,8 @@
  */
 package Frames;
 
+import javax.swing.JTextArea;
+
 import Global.ProccessColecction;
 import Global.ScannerController;
 import Global.Tabla;
@@ -81,22 +83,28 @@ public class showComparativa extends javax.swing.JFrame {
         campoTxt4.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt4.setText("RESULTADOS");
         jPanel1.add(campoTxt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, -1));
+        jTextArea5.setEditable(false);
 
         campoTxt3.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt3.setText("ROUND ROBIN");
         jPanel1.add(campoTxt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, -1, -1));
+        jTextArea4.setEditable(false);
 
         campoTxt2.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt2.setText(" FIFO");
         jPanel1.add(campoTxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, 20));
+        jTextArea3.setEditable(false);
 
         campoTxt1.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt1.setText("SJF/D");
         jPanel1.add(campoTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, -1));
+        jTextArea2.setEditable(false);
 
         campoTxt.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt.setText("SJF");
         jPanel1.add(campoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
+        jTextArea1.setText("a");
+        jTextArea1.setEditable(false);
 
         cargar.setBackground(new java.awt.Color(204, 204, 204));
         cargar.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
