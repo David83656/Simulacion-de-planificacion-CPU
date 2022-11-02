@@ -1,5 +1,7 @@
 package Helpers;
 
+import javax.swing.JOptionPane;
+
 import Global.ProccessColecction;
 import Global.ScannerController;
 import Global.Tabla;
@@ -19,7 +21,7 @@ public abstract class comparador {
         Resultados jsf = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
         jsf.calcularTiempoDeFinalizacionDeProcesos();
         RSO.resetRSO();
-       // System.out.println("Pulse una tecla para ver el siguiente resultado");
+        //System.out.println("Pulse una tecla para ver el siguiente resultado");
         //ScannerController.pause();
         
         PrintHelper.cls();
@@ -30,8 +32,8 @@ public abstract class comparador {
         Resultados jsfd = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
         jsfd.calcularTiempoDeFinalizacionDeProcesos();
         RSO.resetRSO();
-       // System.out.println("Pulse una tecla para ver el siguiente resultado");
-      //  ScannerController.pause();
+        // System.out.println("Pulse una tecla para ver el siguiente resultado");
+        //  ScannerController.pause();
 
         PrintHelper.cls();
         ProccessColecction.submit();
@@ -41,8 +43,8 @@ public abstract class comparador {
         Resultados fifo = new Resultados(Tabla.tabla, ProccessColecction.getProcesos(), RSO.i - 1);
         fifo.calcularTiempoDeFinalizacionDeProcesos();
         RSO.resetRSO();
-       // System.out.println("Pulse una tecla para ver el siguiente resultado");
-       // ScannerController.pause();
+        // System.out.println("Pulse una tecla para ver el siguiente resultado");
+        // ScannerController.pause();
 
         PrintHelper.cls();
         ProccessColecction.submit();
@@ -58,6 +60,7 @@ public abstract class comparador {
     public static void showResults(){
 
             PrintHelper.cls();
+            JOptionPane.showMessageDialog(null, (" JSF: "+results[0]+"\n"+" JSFD: "+results[1]+"\n"+" FIFO: "+results[2]+"\n"+" RR: "+results[3]+"\n"), "Resultados", 1);
             System.out.println(" --- Comparativa entre politicas --- ");
             System.out.println("Tiempo empleado por: ");
             System.out.println("JSF: " + results[0]);

@@ -49,17 +49,11 @@ public class showComparativa extends javax.swing.JFrame {
         campoTxt2 = new javax.swing.JLabel();
         campoTxt1 = new javax.swing.JLabel();
         campoTxt = new javax.swing.JLabel();
+        cargar4 = new javax.swing.JButton();
+        cargar3 = new javax.swing.JButton();
+        cargar2 = new javax.swing.JButton();
+        cargar1 = new javax.swing.JButton();
         cargar = new javax.swing.JButton();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea5 = new javax.swing.JTextArea();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -74,91 +68,95 @@ public class showComparativa extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 650, 110, 30));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, 110, 30));
 
         Titulo.setFont(new java.awt.Font("Roboto Medium", 1, 24)); // NOI18N
         Titulo.setText("                    COMPARATIVA");
-        jPanel1.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 480, 60));
+        jPanel1.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 480, 60));
 
         campoTxt4.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt4.setText("RESULTADOS");
-        jPanel1.add(campoTxt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, -1));
-        jTextArea5.setEditable(false);
+        jPanel1.add(campoTxt4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 110, 20));
 
         campoTxt3.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt3.setText("ROUND ROBIN");
-        jPanel1.add(campoTxt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 390, -1, -1));
-        jTextArea4.setEditable(false);
+        jPanel1.add(campoTxt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 110, -1));
 
         campoTxt2.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt2.setText(" FIFO");
-        jPanel1.add(campoTxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, 20));
-        jTextArea3.setEditable(false);
+        jPanel1.add(campoTxt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 40, 20));
 
         campoTxt1.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt1.setText("SJF/D");
-        jPanel1.add(campoTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, -1, -1));
-        jTextArea2.setEditable(false);
+        jPanel1.add(campoTxt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, -1, 20));
 
         campoTxt.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         campoTxt.setText("SJF");
-        jPanel1.add(campoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
-        jTextArea1.setText("a");
-        jTextArea1.setEditable(false);
+        jPanel1.add(campoTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, -1, 20));
+
+        cargar4.setBackground(new java.awt.Color(204, 204, 204));
+        cargar4.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        cargar4.setText("MOSTRAR");
+        cargar4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cargar4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cargar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, 100, 40));
+
+        cargar3.setBackground(new java.awt.Color(204, 204, 204));
+        cargar3.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        cargar3.setText("MOSTRAR");
+        cargar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cargar3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cargar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 100, 40));
+
+        cargar2.setBackground(new java.awt.Color(204, 204, 204));
+        cargar2.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        cargar2.setText("MOSTRAR");
+        cargar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cargar2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cargar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 100, 40));
+
+        cargar1.setBackground(new java.awt.Color(204, 204, 204));
+        cargar1.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        cargar1.setText("MOSTRAR");
+        cargar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cargar1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cargar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 100, 40));
 
         cargar.setBackground(new java.awt.Color(204, 204, 204));
         cargar.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        cargar.setText("CARGAR DATOS");
+        cargar.setText("MOSTRAR");
         cargar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cargarActionPerformed(evt);
             }
         });
-        jPanel1.add(cargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 650, 170, 30));
-
-        jTextArea5.setColumns(20);
-        jTextArea5.setRows(5);
-        jScrollPane5.setViewportView(jTextArea5);
-
-        jPanel1.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 450, 180));
-
-        jTextArea4.setColumns(20);
-        jTextArea4.setRows(5);
-        jScrollPane4.setViewportView(jTextArea4);
-
-        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 340, 270, 110));
-
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane3.setViewportView(jTextArea3);
-
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 270, 110));
-
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
-
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, 270, 110));
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 270, 110));
+        jPanel1.add(cargar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, 130, 40));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/650043d8d746e5e29efde3534c60f823.jpg"))); // NOI18N
         Fondo.setText("jLabel1");
-        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 700));
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 560));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -172,13 +170,29 @@ public class showComparativa extends javax.swing.JFrame {
 
     private void cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarActionPerformed
         // TODO add your handling code here:
-        if (!OptionHelper.validateNotEmptyProcess())
-        comparador.fillResults();
-        comparador.showResults();
+
+        
+        
        
         
         
     }//GEN-LAST:event_cargarActionPerformed
+
+    private void cargar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cargar1ActionPerformed
+
+    private void cargar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cargar2ActionPerformed
+
+    private void cargar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargar3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cargar3ActionPerformed
+
+    private void cargar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargar4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cargar4ActionPerformed
 
     
     
@@ -233,17 +247,11 @@ public class showComparativa extends javax.swing.JFrame {
     private javax.swing.JLabel campoTxt3;
     private javax.swing.JLabel campoTxt4;
     private javax.swing.JButton cargar;
+    private javax.swing.JButton cargar1;
+    private javax.swing.JButton cargar2;
+    private javax.swing.JButton cargar3;
+    private javax.swing.JButton cargar4;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea5;
     // End of variables declaration//GEN-END:variables
 }
