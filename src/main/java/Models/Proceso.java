@@ -140,8 +140,8 @@ public class Proceso {
   }
    public String toBeautyString(){
     return 
-    "Id: " + this.id + '\n' +
-    "Tiempo requrido: " + this.tiempoRequerido +  '\n' +
+    "Proceso: " + this.id + '\n' +
+    "Tiempo requerido: " + this.tiempoRequerido +  '\n' +
     "Rafagas de ejecucion:" + beautyRafages() + '\n' +
     "Terminado a las " + getTiempoDeFinalizacion() + " UT";
 

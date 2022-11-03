@@ -68,7 +68,7 @@ public class showComparativa extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, 120, 30));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 460, 120, 50));
 
         Titulo.setFont(new java.awt.Font("Roboto Medium", 1, 24)); // NOI18N
         Titulo.setText("                    COMPARATIVA");
